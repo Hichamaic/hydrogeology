@@ -1,0 +1,1147 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hicham Yuno | Premium Hydrogeology Portfolio & CV</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional Portfolio and CV of Hicham Yuno, Specialist Hydrogeologist focused on groundwater flow modeling, GIS mapping, and water resources management.">
+    <meta name="keywords" content="Hydrogeology, Groundwater Modeling, MODFLOW, GMS, GIS, ArcGIS, Water Resources, Hicham Yuno">
+    <meta name="author" content="Hicham Yuno">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hicham Yuno | Hydrogeology Portfolio">
+    <meta property="og:description" content="Explore advanced groundwater modeling, spatial analysis, and water resource management projects.">
+    <meta property="og:url" content="https://hydrogeo.space">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Hicham Yuno | Hydrogeology Portfolio">
+    <meta property="twitter:description" content="Explore advanced groundwater modeling and spatial analysis projects.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        hydroDark: '#07162c',
+                        hydroMedium: '#0d2a4a',
+                        hydroLight: '#1e40af',
+                        hydroAccent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', 'Cairo', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); }
+        .dark .glass { background: rgba(13, 42, 74, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-nav { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); }
+        .dark .glass-nav { background: rgba(7, 22, 44, 0.65); backdrop-filter: blur(20px); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .print-page { page-break-after: always; }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hicham Yuno",
+      "jobTitle": "Hydrogeologist",
+      "url": "https://hydrogeo.space",
+      "sameAs": [
+        "https://github.com",
+        "https://linkedin.com"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-hydroDark text-slate-800 dark:text-slate-100 transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 transition-opacity duration-500">
+        <div class="relative flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-hydroAccent border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-white mt-4 font-semibold tracking-wider animate-pulse">HYDROGEO.SPACE</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-hydroAccent z-50 transition-all duration-100 w-0"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to Top" class="no-print fixed bottom-6 right-6 z-40 bg-hydroAccent text-white p-3 rounded-full shadow-lg opacity-0 translate-y-10 transition-all duration-300 hover:bg-emerald-600">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="no-print fixed top-0 left-0 w-full z-40 glass-nav border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-2">
+                <i class="fa-solid fa-droplet text-hydroAccent text-2xl animate-bounce"></i>
+                <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-600 to-hydroAccent bg-clip-text text-transparent">Hydrogeo</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-6 font-medium text-sm">
+                <a href="#about" class="nav-link hover:text-hydroAccent transition-colors">About</a>
+                <a href="#skills" class="nav-link hover:text-hydroAccent transition-colors">Skills</a>
+                <a href="#software" class="nav-link hover:text-hydroAccent transition-colors">Software</a>
+                <a href="#projects" class="nav-link hover:text-hydroAccent transition-colors">Projects</a>
+                <a href="#articles" class="nav-link hover:text-hydroAccent transition-colors">Articles</a>
+                <a href="#cv" class="nav-link hover:text-hydroAccent transition-colors">Resume</a>
+                <a href="#gallery" class="nav-link hover:text-hydroAccent transition-colors">Gallery</a>
+                <a href="#contact" class="nav-link hover:text-hydroAccent transition-colors">Contact</a>
+            </div>
+
+            <!-- Utilities (Lang, Theme, Mobile Toggle) -->
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector -->
+                <select id="langSelect" aria-label="Switch Language" class="bg-transparent text-sm font-semibold border border-slate-300 dark:border-slate-700 rounded px-2 py-1 focus:outline-none cursor-pointer">
+                    <option value="en" class="text-black">EN</option>
+                    <option value="ar" class="text-black">AR</option>
+                    <option value="fr" class="text-black">FR</option>
+                </select>
+
+                <!-- Light/Dark Mode Switcher -->
+                <button id="themeToggle" aria-label="Toggle Theme" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Open Mobile Menu" class="lg:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dynamic Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden w-full glass border-t border-slate-200 dark:border-slate-800 p-4 space-y-3 font-semibold">
+            <a href="#about" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#skills" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+            <a href="#software" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Software</a>
+            <a href="#projects" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+            <a href="#articles" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Articles</a>
+            <a href="#cv" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Resume</a>
+            <a href="#gallery" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Gallery</a>
+            <a href="#contact" class="block py-2 px-4 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="hero" class="relative pt-32 pb-20 min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 via-blue-50 to-emerald-50 dark:from-hydroDark dark:via-slate-900 dark:to-hydroMedium">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
+            <div class="space-y-6 text-center lg:text-left dynamic-align">
+                <span class="inline-block bg-blue-100 dark:bg-slate-800 text-blue-600 dark:text-hydroAccent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full animate-pulse" data-i18n="heroBadge">Advanced Subsurface Analytics</span>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                    <span class="block text-slate-900 dark:text-white" data-i18n="heroGreeting">Hicham Yuno</span>
+                    <span class="block mt-2 text-hydroLight dark:text-hydroAccent text-3xl sm:text-4xl font-semibold" id="typingEffect"></span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-lg mx-auto lg:mx-0" data-i18n="heroDesc">
+                    Specialist in quantitative hydrogeology, complex dynamic groundwater flow modeling, numerical simulations, and GIS spatial mapping for sustainable resource management.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#projects" class="bg-hydroLight dark:bg-hydroAccent text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 dark:hover:bg-emerald-600 transition-all transform hover:-translate-y-1" data-i18n="heroBtnProjects">Explore Projects</a>
+                    <a href="#contact" class="glass text-slate-900 dark:text-white font-bold px-6 py-3 rounded-xl hover:bg-white/60 dark:hover:bg-slate-800/60 transition-all" data-i18n="heroBtnContact">Get In Touch</a>
+                </div>
+                <!-- Social links -->
+                <div class="flex justify-center lg:justify-start space-x-6 text-xl pt-4 text-slate-500 dark:text-slate-400">
+                    <a href="#" aria-label="LinkedIn Profile" class="hover:text-hydroAccent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub Profile" class="hover:text-hydroAccent transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="ResearchGate" class="hover:text-hydroAccent transition-colors"><i class="fa-brands fa-researchgate"></i></a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <!-- Profile Image & Graphic -->
+                <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl overflow-hidden glass p-3 border border-slate-200 dark:border-slate-800 shadow-2xl">
+                    <div class="w-full h-full bg-gradient-to-b from-blue-900 to-hydroMedium rounded-2xl flex flex-col items-center justify-center p-6 text-center text-white relative">
+                        <i class="fa-solid fa-user-gear text-6xl text-hydroAccent mb-4 animate-pulse"></i>
+                        <h3 class="text-xl font-bold tracking-wide">Hicham Yuno</h3>
+                        <p class="text-sm text-slate-300 mt-2" data-i18n="heroImgPlaceholder">Professional Profile Image Placeholder</p>
+                        <p class="text-xs text-slate-400 mt-4 px-4 italic" data-i18n="heroImgSub">Strict facial consistency mode activated for certified custom deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="reveal py-24 glass border-y border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="aboutTitle">About Me</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="aboutSub">Expertise in Aquifer Systems & Mathematical Modeling</h3>
+                    <p data-i18n="aboutP1">
+                        With an intensive academic background and years of focused technical engineering track experience, my career objective focuses completely on executing high-precision aquifer stress tests, delineating structural hydrogeological catchments, and creating rigorous predictive tools.
+                    </p>
+                    <p data-i18n="aboutP2">
+                        I specialize in translating multi-disciplinary spatial datasets into structured hydrodynamic matrices, supporting strategic decisions for environmental protection, water resource supply optimization, and infrastructural planning.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#cv" class="inline-flex items-center space-x-2 bg-hydroLight dark:bg-hydroAccent text-white font-bold px-5 py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-emerald-600 transition-colors shadow">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span data-i18n="aboutCvBtn">View Professional Resume</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Education Details Timeline -->
+                <div class="glass p-6 rounded-2xl space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white border-b pb-2" data-i18n="aboutEduTitle"><i class="fa-solid fa-graduation-cap text-hydroAccent mr-2"></i> Academic Foundations</h3>
+                    <div class="space-y-6 border-l-2 border-slate-200 dark:border-slate-700 pl-4 ml-2">
+                        <div class="relative">
+                            <div class="absolute -left-[25px] top-1.5 w-3 h-3 rounded-full bg-hydroAccent"></div>
+                            <span class="text-xs font-bold text-hydroAccent">2023 - 2026</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-base">Advanced Research in Subsurface Fluid Dynamics</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Specialized Post-Graduate Focus & Engineering track studies.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[25px] top-1.5 w-3 h-3 rounded-full bg-slate-400"></div>
+                            <span class="text-xs font-bold text-slate-500">2019 - 2023</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-base">B.Sc. Earth Sciences & Earth Engineering Foundations</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Comprehensive curriculum in structural geology, hydrology, geostatistics, and spatial analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="reveal py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="skillsTitle">Core Engineering Capabilities</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Technical skills with custom animated level loops -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center" data-i18n="skillsTechTitle"><i class="fa-solid fa-gears text-hydroAccent mr-2"></i> Hydrogeological Technical Skills</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill1">Groundwater Flow & Transport Modeling</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill2">GIS Spatial Analysis & Watershed Delineation</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill3">Aquifer Pumping Test Interpretation & Hydraulics</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill4">Geostatistical Modeling & Isoline Mapping</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Methodological 
+
+             <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill1">Groundwater Flow & Transport Modeling</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill2">GIS Spatial Analysis & Watershed Delineation</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill3">Aquifer Pumping Test Interpretation & Hydraulics</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span data-i18n="skill4">Geostatistical Modeling & Isoline Mapping</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-hydroAccent rounded-full transition-all duration-1000" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Methodological Competencies -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center" data-i18n="skillsSoftTitle"><i class="fa-solid fa-user-check text-hydroAccent mr-2"></i> Professional Soft Skills</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="glass p-4 rounded-xl flex items-start space-x-3">
+                            <i class="fa-solid fa-comments text-emerald-500 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="soft1Title">Technical Reporting</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="soft1Desc">Clear presentation of mathematical simulation limits and data gaps.</p>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-start space-x-3">
+                            <i class="fa-solid fa-people-group text-emerald-500 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="soft2Title">Cross-Disciplinary Teamwork</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="soft2Desc">Bridging gaps between civil engineering, environmental science, and data developers.</p>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-start space-x-3">
+                            <i class="fa-solid fa-lightbulb text-emerald-500 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="soft3Title">Analytical Diagnostics</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="soft3Desc">Resolving conceptual layer errors and bounding condition instabilities.</p>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-start space-x-3">
+                            <i class="fa-solid fa-clock text-emerald-500 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="soft4Title">Project Compliance</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="soft4Desc">Adhering strictly to international water safety guidelines and ecological criteria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- 4. Software Suite Section -->
+    <section id="software" class="reveal py-24 glass border-y border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="softwareTitle">Technical Software Architecture</h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="softwareSub">Industry-standard core numerical simulators, GIS platforms, and log analysis engines.</p>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card Loop for Softwares -->
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">M</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">MODFLOW</h3>
+                    <p class="text-xs text-slate-400 mt-1">Groundwater Flow Simulations</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">G</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">GMS</h3>
+                    <p class="text-xs text-slate-400 mt-1">Groundwater Modeling System</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">F</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">FEFLOW</h3>
+                    <p class="text-xs text-slate-400 mt-1">Finite Element Subsurface Flow</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">W</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">WEAP</h3>
+                    <p class="text-xs text-slate-400 mt-1">Water Evaluation & Planning</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">A</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">ArcGIS Pro</h3>
+                    <p class="text-xs text-slate-400 mt-1">Spatial Mapping & Analysis</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">Q</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">QGIS</h3>
+                    <p class="text-xs text-slate-400 mt-1">Open Source Geoprocessing</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">S</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">Surfer</h3>
+                    <p class="text-xs text-slate-400 mt-1">3D Surface Gridding & Contouring</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">P</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">Petrel</h3>
+                    <p class="text-xs text-slate-400 mt-1">Subsurface Core Geology Interpretation</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">T</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">Techlog</h3>
+                    <p class="text-xs text-slate-400 mt-1">Wellbore Petrophysical Logging</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-center group hover:border-hydroAccent transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mx-auto text-blue-600 dark:text-hydroAccent text-xl font-bold mb-3 group-hover:scale-110 transition-transform">R</div>
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white">R Language</h3>
+                    <p class="text-xs text-slate-400 mt-1">Statistical Hydrochemistry Analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section id="projects" class="reveal py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="projectsTitle">Scientific Operational Projects</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+                      <div class="space-y-12">
+                <!-- Case Study Project Card 1 -->
+                <div class="glass rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 lg:p-8">
+                    <div class="lg:col-span-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-hydroAccent uppercase tracking-widest">Numerical Simulation</span>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Ahnet Basin Fractured Aquifer Hydrodynamic Modeling</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <strong>Objectives:</strong> To simulate local drawdown impacts under multi-well stress schedules, assessing critical recharge velocities within consolidated sandstone boundaries.
+                            </p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <strong>Methodology:</strong> Executed block-centered finite-difference spatial discretization maps using MODFLOW, adjusting boundary conductances according to regional lineament patterns.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">MODFLOW</span>
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">GMS</span>
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">Surfer</span>
+                            </div>
+                            <div class="flex space-x-3 text-xs font-bold">
+                                <a href="#" class="text-hydroAccent hover:underline"><i class="fa-solid fa-file-pdf mr-1"></i> Technical Document</a>
+                                <a href="#" class="text-hydroAccent hover:underline"><i class="fa-solid fa-link mr-1"></i> Data Stream</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cover image & mini gallery container -->
+                    <div class="lg:col-span-8 grid grid-cols-3 gap-3">
+                        <div class="col-span-3 bg-gradient-to-r from-blue-900 to-slate-900 h-64 rounded-2xl flex flex-col items-center justify-center p-4 text-center text-white relative overflow-hidden">
+                            <i class="fa-solid fa-layer-group text-4xl text-hydroAccent mb-2"></i>
+                            <span class="font-bold text-sm">3D Stratigraphic Boundary Layer Mapping</span>
+                            <span class="text-xs text-slate-400 mt-1">Main Numerical Grid Matrix Visualization</span>
+                        </div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">Isoline Transmissivity</div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">Drawdown Curve</div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">Residual Vector Chart</div>
+                    </div>
+                </div>
+
+                <!-- Case Study Project Card 2 -->
+                <div class="glass rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 lg:p-8">
+                    <div class="lg:col-span-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-hydroAccent uppercase tracking-widest">GIS Spatial Engineering</span>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Regional Watershed Vulnerability Mapping & Infiltration Assessment</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <strong>Objectives:</strong> Creating high-precision susceptibility matrix maps for structural catchment zones to optimize recharge node selections.
+                            </p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <strong>Methodology:</strong> Multi-criteria analytical hierarchy modeling (AHP) aggregating slopes, lithological density, hydraulic conductivity distributions, and dense drainage configurations.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">ArcGIS Pro</span>
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">QGIS</span>
+                                <span class="bg-blue-100 dark:bg-slate-800 text-blue-700 dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-medium">R Language</span>
+                            </div>
+                            <div class="flex space-x-3 text-xs font-bold">
+                                <a href="#" class="text-hydroAccent hover:underline"><i class="fa-solid fa-file-pdf mr-1"></i> GIS Map Catalog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cover image & mini gallery container -->
+                    <div class="lg:col-span-8 grid grid-cols-3 gap-3">
+                        <div class="col-span-3 bg-gradient-to-r from-emerald-950 to-slate-900 h-64 rounded-2xl flex flex-col items-center justify-center p-4 text-center text-white relative overflow-hidden">
+                            <i class="fa-solid fa-map-location-dot text-4xl text-emerald-400 mb-2"></i>
+                            <span class="font-bold text-sm">Spatial Catchment Infiltration Vector Overlays</span>
+                            <span class="text-xs text-slate-400 mt-1">Multi-layered Raster Dataset Grid</span>
+                        </div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">DEM Drainage</div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">AHP Matrix</div>
+                        <div class="bg-slate-800 h-20 rounded-xl flex items-center justify-center text-xs text-slate-400 text-center p-1">Runoff Map</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Articles & Scientific Research Section -->
+    <section id="articles" class="reveal py-24 glass border-y border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="articlesTitle">Technical Publications & Articles</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+                      <!-- Simple Search and Category Filter -->
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+                <input type="text" id="articleSearch" placeholder="Search technical notes..." class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-2 w-full max-w-md text-sm focus:outline-none focus:border-hydroAccent">
+                <div class="flex space-x-2 text-xs font-semibold">
+                    <button class="bg-hydroLight text-white px-3 py-1.5 rounded-lg">All Technical Notes</button>
+                    <button class="glass px-3 py-1.5 rounded-lg hover:border-hydroAccent">Aquifer Tests</button>
+                    <button class="glass px-3 py-1.5 rounded-lg hover:border-hydroAccent">Geostatistics</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <article class="glass rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-hydroAccent transition-all">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-hydroAccent uppercase">Methodology Brief</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug group-hover:text-hydroAccent transition-colors">Mathematical Discretization Loops inside Semi-Arid Numerical Aquifer Systems</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-3">
+                            An analytical exploration into setting complex horizontal flow barriers inside variable-density hydrogeological domains without creating matrix singularity crashes.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-200/50 dark:border-slate-800/50 mt-4 flex items-center justify-between text-xs font-bold">
+                        <span class="text-slate-400">July 2026</span>
+                        <button onclick="openArticleModal('Mathematical Discretization Loops', 'Full text analysis of boundary discretization methods inside sandstone basins... This covers finite-difference and finite-element convergence strategies under sharp stress profiles.')" class="text-hydroLight dark:text-hydroAccent hover:underline">Read Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="glass rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-hydroAccent transition-all">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-hydroAccent uppercase">Field Practice</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug group-hover:text-hydroAccent transition-colors">Evaluating Neogene Sediment Transmissivity via High-Stress Radial Pumping Routines</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-3">
+                            Practical insights derived from empirical field pumping trials, comparing analytical Cooper-Jacob matching methods with fully structured numerical solvers.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-200/50 dark:border-slate-800/50 mt-4 flex items-center justify-between text-xs font-bold">
+                        <span class="text-slate-400">May 2026</span>
+                        <button onclick="openArticleModal('Evaluating Neogene Sediment Transmissivity', 'Comprehensive diagnostic curve methodologies for unconfined and leaky aquifer systems. Discusses skin factors and well efficiency parameters.')" class="text-hydroLight dark:text-hydroAccent hover:underline">Read Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Read More Modal -->
+    <div id="articleModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm hidden">
+        <div class="glass w-full max-w-2xl rounded-2xl p-6 overflow-y-auto max-h-[80vh] relative">
+            <button onclick="closeArticleModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modalTitle" class="text-xl font-bold text-slate-900 dark:text-white pr-6"></h3>
+            <div id="modalBody" class="text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed whitespace-pre-line"></div>
+        </div>
+    </div>
+
+    <!-- 7. Certifications Section -->
+    <section class="reveal py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="certTitle">Professional Certifications & Badges</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-5 rounded-xl flex items-center space-x-4">
+                    <i class="fa-solid fa-award text-3xl text-hydroAccent"></i>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">Certified Environmental Groundwater Hydrologist</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">Advanced International Competency Certification</p>
+                    </div>
+                </div>
+                <div class="glass p-5 rounded-xl flex items-center space-x-4">
+                    <i class="fa-solid fa-award text-3xl text-hydroAccent"></i>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">Advanced Subsurface Geospatial Analyst Certification</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">Comprehensive GIS Geoprocessing Suite Track</p>
+                    </div>
+                </div>
+                <div class="glass p-5 rounded-xl flex items-center space-x-4">
+                    <i class="fa-solid fa-certificate text-3xl text-hydroAccent"></i>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">Professional Numerical Aquifer Modeler</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">Certified finite-difference software expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- 8. Complete Resume / CV Section (Print-Friendly) -->
+    <section id="cv" class="reveal py-24 glass border-y border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 no-print">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="cvTitle">Curriculum Vitae</h2>
+                <p class="text-xs text-slate-400 mt-2">Comprehensive operational profile formatted beautifully for digital review or high-precision physical printouts.</p>
+                <button onclick="window.print()" class="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs px-4 py-2 rounded-lg transition-colors"><i class="fa-solid fa-print mr-1"></i> Print / Save as PDF</button>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- CV Render Box -->
+            <div class="bg-white text-slate-950 p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-200 relative overflow-hidden print-page">
+                <!-- Watermark for print quality -->
+                <div class="absolute -right-20 -top-20 text-slate-100/40 text-[15rem] pointer-events-none select-none z-0"><i class="fa-solid fa-droplet"></i></div>
+
+                <div class="relative z-10 space-y-8">
+                    <!-- Header -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-6 border-slate-200 gap-4">
+                        <div>
+                            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900">Hicham Yuno</h3>
+                            <p class="text-hydroLight font-semibold uppercase tracking-wider text-sm mt-1">Specialist Engineer Track Hydrogeologist</p>
+                        </div>
+                        <div class="text-xs text-slate-600 space-y-1 sm:text-right font-medium">
+                            <p><i class="fa-solid fa-envelope w-4"></i> contact@hydrogeo.space</p>
+                            <p><i class="fa-solid fa-globe w-4"></i> https://hydrogeo.space</p>
+                            <p><i class="fa-solid fa-location-dot w-4"></i> Algeria / Remote Connectivity Available</p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Summary -->
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-2">Professional Summary</h4>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            A highly analytical and dedicated professional holding certifications for both advanced geological exploration systems and spatial analytics. Proven expert in resolving difficult aquifer geometry distributions and setting calibrated predictive numerical templates. Deeply focused on water resource reliability mapping, high-precision hydraulic logging interpretation, and finite-difference groundwater modeling.
+                        </p>
+                    </div>
+
+                    <!-- Experience Timeline -->
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-4">Core Structural Experience</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-start text-sm font-bold">
+                                    <h5 class="text-slate-900 text-base">Project Infrastructure Data Analyst & Field Logistics Manager</h5>
+                                    <span class="text-slate-500 font-semibold text-xs whitespace-nowrap">Dec 2025 - Present</span>
+                                </div>
+                                <p class="text-xs text-hydroLight font-semibold">Photovoltaic Solar Energy & Civil Support Initiative</p>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Overseeing data integrity verification matrix charts and long-distance technical transit routes along critical nodes, assuring constant logistical alignment across massive remote infrastructural components.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-start text-sm font-bold">
+                                    <h5 class="text-slate-900 text-base">Subsurface Transport Operations Lead & Field Mission Specialist</h5>
+                                    <span class="text-slate-500 font-semibold text-xs whitespace-nowrap">June 2025 - Dec 2025</span>
+                                </div>
+                                <p class="text-xs text-hydroLight font-semibold">DP Realisation Ahnet Basins Gas Production Support</p>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Managed high-pressure geological terrain operational mapping routes. Successfully executed remote field structural inspections across complex geological areas including Ahnet, In Salah, and In Amguel sectors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Matrix Grid -->
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-3">Core Technical Domains</h4>
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-800">
+                            <span class="bg-slate-100 px-3 py-1 rounded">Aquifer Flow Modeling (MODFLOW)</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded">Spatial Geoprocessing (ArcGIS Pro / QGIS)</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded">3D Isoline Surface Contouring (Surfer)</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded">Hydraulic Logging Discretization</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded">Quantitative Hydrology Diagnostics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Masonry Gallery Section -->
+    <section id="gallery" class="reveal py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="galleryTitle">Subsurface Field Visualization Gallery</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Masonry-like Flex Columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-3 rounded-2xl group overflow-hidden cursor-pointer" onclick="openLightbox('3D Finite Difference Stratigraphic Grids', 'An output grid view showing complex multilayer fault configurations inside sedimentary basins.')">
+                    <div class="bg-slate-800 h-48 rounded-xl flex items-center justify-center text-white font-bold relative overflow-hidden">
+                        <i class="fa-solid fa-chart-area text-4xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-4 text-center text-xs">Click to view analytical high-res composite chart</div>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3">3D Finite Difference Stratigraphic Grids</h4>
+                </div>
+                <div class="glass p-3 rounded-2xl group overflow-hidden cursor-pointer" onclick="openLightbox('Empirical Drawdown Contours', 'calibrated hydraulic isolines indicating real-time zone drawdown values.')">
+                    <div class="bg-slate-800 h-64 rounded-xl flex items-center justify-center text-white font-bold relative overflow-hidden">
+                        <i class="fa-solid fa-compass-drafting text-4xl text-emerald-400 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-4 text-center text-xs">Click to view analytical high-res composite chart</div>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3">Empirical Drawdown Contours</h4>
+                </div>
+                <div class="glass p-3 rounded-2xl group overflow-hidden cursor-pointer" onclick="openLightbox('Lineament Extraction Matrices', 'Satellite structural telemetry analyzed to calculate secondary directional porosity arrays.')">
+                    <div class="bg-slate-800 h-52 rounded-xl flex items-center justify-center text-white font-bold relative overflow-hidden">
+                        <i class="fa-solid fa-globe-africa text-4xl text-purple-400 group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-4 text-center text-xs">Click to view analytical high-res composite chart</div>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3">Lineament Extraction Matrices</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md hidden">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-hydroAccent"><i class="fa-solid fa-xmark"></i></button>
+        <div class="text-center max-w-3xl space-y-4">
+            <div class="bg-slate-900 p-12 rounded-3xl border border-slate-800 flex items-center justify-center text-6xl text-hydroAccent">
+                <i class="fa-solid fa-diagram-project animate-pulse"></i>
+            </div>
+            <h3 id="lightboxTitle" class="text-xl font-bold text-white"></h3>
+            <p id="lightboxDesc" class="text-sm text-slate-400 max-w-md mx-auto"></p>
+        </div>
+    </div>
+
+    <!-- 10. Contact Section -->
+    <section id="contact" class="reveal py-24 glass border-t border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white" data-i18n="contactTitle">Initiate Technical Communications</h2>
+                <div class="h-1 w-20 bg-hydroAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Info cards & Maps placeholder -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass p-6 rounded-2xl flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 text-blue-600 dark:text-hydroAccent rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400" data-i18n="contactEmail">Direct Email Connection</h4>
+                            <p class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">contact@hydrogeo.space</p>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-slate-800 text-blue-600 dark:text-hydroAccent rounded-xl flex items-center justify-center text-xl"><i class="fa-brands fa-linkedin"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">Professional Network</h4>
+                            <p class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">LinkedIn Connected Profile</p>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="glass p-4 rounded-2xl h-48 bg-slate-900 flex flex-col items-center justify-center text-center p-4 border border-slate-800 text-slate-400">
+                        <i class="fa-solid fa-map-location text-3xl text-hydroAccent mb-2"></i>
+                        <span class="font-semibold text-xs text-white">Geographic Base Node Platform</span>
+                        <span class="text-[10px] mt-1 max-w-xs">Algeria structural mapping coordinates. Open connection matrix protocols activated.</span>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-7 glass p-8 rounded-3xl">
+                    <form id="contactForm" class="space-y-4" onsubmit="event.preventDefault(); alert('Communication successfully packaged and sent down the digital array.');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-400 mb-1" data-i18n="formName">Your Name</label>
+                                <input type="text" required class="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-hydroAccent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-400 mb-1" data-i18n="formEmail">Your Email</label>
+                                <input type="email" required class="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-hydroAccent">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1" data-i18n="formSubject">Project Field / Subject</label>
+                            <input type="text" required class="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-hydroAccent">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1" data-i18n="formMessage">Message Matrix Content</label>
+                            <textarea rows="4" required class="w-full bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-hydroAccent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-hydroLight dark:bg-hydroAccent hover:bg-blue-700 dark:hover:bg-emerald-600 text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-lg" data-i18n="formBtn">Transmit Analytical Scope</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Premium Footer Section -->
+    <footer class="no-print bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-droplet text-hydroAccent text-xl"></i>
+                <span class="font-bold text-white tracking-wider">HICHAM YUNO | HYDROGEOLOGY</span>
+            </div>
+            <p class="text-xs">&copy; 2026 Hydrogeo.space. Calibrated for strict execution. All Rights Reserved.</p>
+            <div class="flex space-x-4 text-base">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core App Logic JavaScript Module -->
+    <script>
+        // Multi-Language Localization Data Asset Dictionary
+        const i18n = {
+            en: {
+                heroBadge: "Advanced Subsurface Analytics",
+                heroGreeting: "Hicham Yuno",
+                heroDesc: "Specialist in quantitative hydrogeology, complex dynamic groundwater flow modeling, numerical simulations, and GIS spatial mapping for sustainable resource management.",
+                heroBtnProjects: "Explore Projects",
+                heroBtnContact: "Get In Touch",
+                heroImgPlaceholder: "Professional Profile Image Placeholder",
+                heroImgSub: "Strict facial consistency mode activated for certified custom deployments.",
+                aboutTitle: "About Me",
+                aboutSub: "Expertise in Aquifer Systems & Mathematical Modeling",
+                aboutP1: "With an intensive academic background and years of focused technical engineering track experience, my career objective focuses completely on executing high-precision aquifer stress tests, delineating structural hydrogeological catchments, and creating rigorous predictive tools.",
+                aboutP2: "I specialize in translating multi-disciplinary spatial datasets into structured hydrodynamic matrices, supporting strategic decisions for environmental protection, water resource supply optimization, and infrastructural planning.",
+                aboutCvBtn: "View Professional Resume",
+                aboutEduTitle: "Academic Foundations",
+                skillsTitle: "Core Engineering Capabilities",
+                skillsTechTitle: "Hydrogeological Technical Skills",
+                skillsSoftTitle: "Professional Soft Skills",
+                soft1Title: "Technical Reporting",
+                soft1Desc: "Clear presentation of mathematical simulation limits and data gaps.",
+                soft2Title: "Cross-Disciplinary Teamwork",
+                soft2Desc: "Bridging gaps between civil engineering, environmental science, and data developers.",
+                soft3Title: "Analytical Diagnostics",
+                soft3Desc: "Resolving conceptual layer errors and bounding condition instabilities.",
+                soft4Title: "Project Compliance",
+                soft4Desc: "Adhering strictly to international water safety guidelines and ecological criteria.",
+                softwareTitle: "Technical Software Architecture",
+                softwareSub: "Industry-standard core numerical simulators, GIS platforms, and log analysis engines.",
+                projectsTitle: "Scientific Operational Projects",
+                articlesTitle: "Technical Publications & Articles",
+                certTitle: "Professional Certifications & Badges",
+                cvTitle: "Curriculum Vitae",
+                galleryTitle: "Subsurface Field Visualization Gallery",
+                contactTitle: "Initiate Technical Communications",
+                contactEmail: "Direct Email Connection",
+                formName: "Your Name",
+                formEmail: "Your Email",
+                formSubject: "Project Field / Subject",
+                formMessage: "Message Matrix Content",
+                formBtn: "Transmit Analytical Scope"
+            },
+            ar: {
+                heroBadge: "تحليلات متقدمة تحت السطح",
+                heroGreeting: "هشام يونو",
+                heroDesc: "متخصص في الهيدروجيولوجيا الكمية، ونمذجة تدفق المياه الجوفية الديناميكية المعقدة، والمحاكاة العددية، والخرائط المكانية لنظم المعلومات الجغرافية لإدارة الموارد المستدامة.",
+                heroBtnProjects: "استكشاف المشاريع",
+                heroBtnContact: "اتصل بي",
+                heroImgPlaceholder: "مكان مخصص لصورة الملف الشخصي المهني",
+                heroImgSub: "تم تفعيل وضع التناسق الصارم لملامح الوجه لعمليات النشر المخصصة المعتمدة.",
+                aboutTitle: "من أنا",
+                aboutSub: "الخبرة في أنظمة طبقات المياه الجوفية والنمذجة الرياضية",
+                aboutP1: "مع خلفية أكاديمية مكثفة وسنوات من الخبرة الفنية المركزة في المسار الهندسي، يركز هدفي المهني تمامًا على تنفيذ اختبارات الإجهاد عالية الدقة لطبقات المياه الجوفية، وتحديد الأحواض الهيدروجيولوجية الهيكلية، وإنشاء أدوات تنبؤية صارمة.",
+                aboutP2: "أنا متخصص في تحويل مجموعات البيانات المكانية متعددة التخصصات إلى مصفوفات هيدروديناميكية منظمة، ودعم القرارات الاستراتيجية لحماية البيئة، وتحسين إمدادات الموارد المائية، والتخطيط للبنية التحتية.",
+                aboutCvBtn: "عرض السيرة الذاتية المهنية",
+                aboutEduTitle: "الأسس الأكاديمية",
+                skillsTitle: "القدرات الهندسية الأساسية",
+                skillsTechTitle: "المهارات التقنية الهيدروجيولوجية",
+                skillsSoftTitle: "المهارات الشخصية المهنية",
+                soft1Title: "التقارير الفنية",
+                soft1Desc: "تقديم واضح لحدود المحاكاة الرياضية وفجوات البيانات.",
+                soft2Title: "العمل الجماعي متعدد التخصصات",
+                soft2Desc: "سد الفجوات بين الهندسة المدنية وعلوم البيئة ومطوري البيانات.",
+                soft3Title: "التشخيص التحليلي",
+                soft3Desc: "حل أخطاء الطبقة المفاهيمية وعدم استقرار الشروط الحدودية.",
+                soft4Title: "الامتثال للمشروع",
+                soft4Desc: "الالتزام الصارم بالإرشادات الدولية لسلامة المياه والمعايير البيئية.",
+                softwareTitle: "بنية البرمجيات التقنية",
+                softwareSub: "أجهزة المحاكاة العددية الأساسية القياسية في الصناعة، ومنصات نظم المعلومات الجغرافية، ومحركات تحليل السجلات.",
+                projectsTitle: "المشاريع العملياتية العلمية",
+                articlesTitle: "المنشورات والمقالات الفنية",
+                certTitle: "الشهادات والشارات المهنية",
+                cvTitle: "السيرة الذاتية الكاملة",
+                galleryTitle: "معرض الصور للحقول تحت السطحية",
+                contactTitle: "بدء الاتصالات الفنية",
+                contactEmail: "اتصال مباشر عبر البريد الإلكتروني",
+                formName: "اسمك الكامل",
+                formEmail: "بريدك الإلكتروني",
+                formSubject: "مجال المشروع / الموضوع",
+                formMessage: "محتوى مصفوفة الرسالة",
+                formBtn: "إرسال النطاق التحليلي"
+            },
+            fr: {
+                heroBadge: "Analyse Avancée des Subsurfaces",
+                heroGreeting: "Hicham Yuno",
+                heroDesc: "Spécialiste en hydrogéologie quantitative, modélisation dynamique complexe des écoulements d'eau souterraine, simulations numériques et cartographie spatiale SIG pour une gestion durable des ressources.",
+                heroBtnProjects: "Explorer les Projets",
+                heroBtnContact: "Prendre Contact",
+                heroImgPlaceholder: "Espace réservé pour la photo de profil professionnelle",
+                heroImgSub: "Mode de cohérence faciale stricte activé pour les déploiements personnalisés certifiés.",
+                aboutTitle: "À Propos",
+                aboutSub: "Expertise des Systèmes Aquifères & Modélisation Mathématique",
+                aboutP1: "Avec un parcours académique intensif et des années d'expérience technique ciblée en ingénierie, mon objectif de carrière est entièrement orienté vers l'exécution de tests de pompage de haute précision, la délimitation de bassins hydrogéologiques structurels et la création d'outils prédictifs rigoureux.",
+                aboutP2: "Je me spécialise dans la traduction de jeux de données spatiaux multidisciplinaires en matrices hydrodynamiques structurées, soutenant les décisions stratégiques pour la protection de l'environnement, l'optimisation des ressources en eau et la planification des infrastructures.",
+                aboutCvBtn: "Consulter le Curriculum Vitae",
+                aboutEduTitle: "Fondations Académiques",
+                skillsTitle: "Compétences Clés en Ingénierie",
+                skillsTechTitle: "Compétences Techniques Hydrogéologiques",
+                skillsSoftTitle: "Compétences Interpersonnelles Professionnelles",
+                soft1Title: "Rapports Techniques",
+                soft1Desc: "Présentation claire des limites des simulations mathématiques et des lacunes de données.",
+                soft2Title: "Travail d'Équipe Pluridisciplinaire",
+                soft2Desc: "Combler les écarts entre le génie civil, les sciences de l'environnement et les développeurs de données.",
+                soft3Title: "Diagnostics Analytiques",
+                soft3Desc: "Résolution des erreurs de couches conceptuelles et des instabilités des conditions aux limites.",
+                soft4Title: "Conformité des Projets",
+                soft4Desc: "Respect strict des directives internationales sur la sécurité de l'eau et des critères écologiques.",
+                softwareTitle: "Architecture Logicielle Technique",
+                softwareSub: "Simulateurs numériques standards, plateformes SIG et moteurs d'analyse de diagraphies.",
+                projectsTitle: "Projets Scientifiques Opérationnels",
+                articlesTitle: "Publications Techniques & Articles",
+                certTitle: "Certifications Professionnelles",
+                cvTitle: "Curriculum Vitae",
+                galleryTitle: "Galerie de Visualisation de Terrain",
+                contactTitle: "Initier des Communications Techniques",
+                contactEmail: "Connexion Email Directe",
+                formName: "Votre Nom",
+                formEmail: "Votre Email",
+                formSubject: "Domaine du Projet / Sujet",
+                formMessage: "Contenu de la Matrice du Message",
+                formBtn: "Transmettre la Portée Analytique"
+            }
+        };
+
+              // App State Management
+        document.addEventListener("DOMContentLoaded", () => {
+            initPreloader();
+            initTheme();
+            initLanguages();
+            initScrollProgress();
+            initRevealAnimations();
+            initTypingEffect();
+            initMobileMenu();
+        });
+
+        // Preloader Closer Routine
+        function initPreloader() {
+            const preloader = document.getElementById("preloader");
+            window.addEventListener("load", () => {
+                preloader.classList.add("opacity-0");
+                setTimeout(() => preloader.style.display = "none", 500);
+            });
+            // Backup protection timeout
+            setTimeout(() => {
+                preloader.classList.add("opacity-0");
+                setTimeout(() => preloader.style.display = "none", 500);
+            }, 2500);
+        }
+
+        // Theme Configuration Switch Logic
+        function initTheme() {
+            const toggle = document.getElementById("themeToggle");
+            const icon = document.getElementById("themeIcon");
+            
+            if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                document.documentElement.classList.add("dark");
+                icon.className = "fa-solid fa-sun text-lg";
+            } else {
+                document.documentElement.classList.remove("dark");
+                icon.className = "fa-solid fa-moon text-lg";
+            }
+
+            toggle.addEventListener("click", () => {
+                if (document.documentElement.classList.contains("dark")) {
+                    document.documentElement.classList.remove("dark");
+                    localStorage.setItem("theme", "light");
+                    icon.className = "fa-solid fa-moon text-lg";
+                } else {
+                    document.documentElement.classList.add("dark");
+                    localStorage.setItem("theme", "dark");
+                    icon.className = "fa-solid fa-sun text-lg";
+                }
+            });
+        }
+
+        // Language Translation Runtime Dispatcher
+        function initLanguages() {
+            const selector = document.getElementById("langSelect");
+            
+            const applyLanguage = (lang) => {
+                localStorage.setItem("lang", lang);
+                selector.value = lang;
+                
+                // Toggle RTL configuration properties for Arabic compatibility alignment
+                if (lang === "ar") {
+                    document.documentElement.dir = "rtl";
+                    document.documentElement.lang = "ar";
+                    document.querySelectorAll(".dynamic-align").forEach(el => {
+                        el.classList.remove("text-left", "lg:text-left");
+                        el.classList.add("text-right", "lg:text-right");
+                    });
+                } else {
+                    document.documentElement.dir = "ltr";
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll(".dynamic-align").forEach(el => {
+                        el.classList.remove("text-right", "lg:text-right");
+                        el.classList.add("text-left", "lg:text-left");
+                    });
+                }
+
+                // Update text elements marked with translation identifiers
+                document.querySelectorAll("[data-i18n]").forEach(el => {
+                    const key = el.getAttribute("data-i18n");
+                    if (i18n[lang] && i18n[lang][key]) {
+                        el.textContent = i18n[lang][key];
+                    }
+                });
+            };
+
+            const savedLang = localStorage.getItem("lang") || "en";
+            applyLanguage(savedLang);
+
+            selector.addEventListener("change", (e) => applyLanguage(e.target.value));
+        }
+
+        // Global Scroll Progress Track Matrix loops
+        function initScrollProgress() {
+            const progress = document.getElementById("scrollProgress");
+            const btn = document.getElementById("backToTop");
+            
+            window.addEventListener("scroll", () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalHeight > 0) {
+                    const currentProgress = (window.pageYOffset / totalHeight) * 100;
+                    progress.style.width = currentProgress + "%";
+                }
+                
+                // Back to top button presentation threshold
+                if (window.pageYOffset > 400) {
+                    btn.classList.remove("opacity-0", "translate-y-10");
+                    btn.classList.add("opacity-100", "translate-y-0");
+                } else {
+                    btn.classList.remove("opacity-100", "translate-y-0");
+                    btn.classList.add("opacity-0", "translate-y-10");
+                }
+            });
+
+             // Intersection Observer for Modern Reveal Action Items
+        function initRevealAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+        }
+
+        // Interactive Typing Script Array Simulation Loop
+        function initTypingEffect() {
+            const target = document.getElementById("typingEffect");
+            const phrases = ["Hydrogeologist", "Groundwater Modeler", "GIS Mapping Expert"];
+            let phraseIdx = 0;
+            let letterIdx = 0;
+            let currentStr = "";
+            let isDeleting = false;
+
+            const typeLoop = () => {
+                const fullPhrase = phrases[phraseIdx];
+                if (!isDeleting) {
+                    currentStr = fullPhrase.substring(0, letterIdx + 1);
+                    letterIdx++;
+                } else {
+                    currentStr = fullPhrase.substring(0, letterIdx - 1);
+                    letterIdx--;
+                }
+                
+                target.textContent = currentStr;
+
+                let speed = isDeleting ? 40 : 100;
+                
+                if (!isDeleting && currentStr === fullPhrase) {
+                    speed = 1800; // Hold at full text string presentation length
+                    isDeleting = true;
+                } else if (isDeleting && currentStr === "") {
+                    isDeleting = false;
+                    phraseIdx = (phraseIdx + 1) % phrases.length;
+                    speed = 400;
+                }
+
+                setTimeout(typeLoop, speed);
+            };
+
+            typeLoop();
+        }
+
+        // Mobile Responsive Navigation Drawer Logic Controls
+        function initMobileMenu() {
+            const btn = document.getElementById("mobileMenuBtn");
+            const menu = document.getElementById("mobileMenu");
+            
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+
+            // Close automatically when sub links are invoked inside menu drawer
+            menu.querySelectorAll("a").forEach(a => {
+                a.addEventListener("click", () => menu.classList.add("hidden"));
+            });
+        }
+
+        // Article Detailed Read Modal Control Callouts
+        function openArticleModal(title, bodyText) {
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalBody").textContent = bodyText;
+            document.getElementById("articleModal").classList.remove("hidden");
+        }
+        function closeArticleModal() {
+            document.getElementById("articleModal").classList.add("hidden");
+        }
+
+        // Lightbox Filter & Presentation Core Engines
+        function openLightbox(title, desc) {
+            document.getElementById("lightboxTitle").textContent = title;
+            document.getElementById("lightboxDesc").textContent = desc;
+            document.getElementById("lightboxModal").classList.remove("hidden");
+        }
+        function closeLightbox() {
+            document.getElementById("lightboxModal").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
