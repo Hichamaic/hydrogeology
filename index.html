@@ -1051,17 +1051,15 @@
                 if (window.pageYOffset > 400) {
                     btn.classList.remove("opacity-0", "translate-y-10");
                     btn.classList.add("opacity-100", "translate-y-0");
-                } else {
-                    btn.classList.remove("opacity-100", "translate-y-0");
-                    btn.classList.add("opacity-0", "translate-y-10");
-                }
-            });
+        });
+    } // هذا القوس فقط هو ما تضعه مكان الأسطر المحذوفة
 
-             // Intersection Observer for Modern Reveal Action Items
-        function initRevealAnimations() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+    // Intersection Observer for Modern Reveal Action Items
+    function initRevealAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
                         entry.target.classList.add("active");
                     }
                 });
